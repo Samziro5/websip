@@ -1,0 +1,146 @@
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 200px;
+    margin: 10px 10px 10px 10px;
+    background-color: #ffffff;
+    background-size: 100px 100px;
+    
+}
+div .caja {
+    height: 70px;
+    padding: 10px 10px 10px 10px;
+  border: 3px solid green;
+  
+        background-color: rgb(255, 115, 0);
+        /*background-image: url(/Imagenes/ANUBISv3.png);*/
+       
+}
+img{
+ width: 150px;
+ margin: 0px 10px 25px 40px;
+
+}
+
+nav {
+    margin: rigth 20px;
+    position:absolute;
+    top:70px;
+    right: 0;
+    padding: 30px 50px 10px 20px;
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+
+}
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+h1 {
+    padding: 5px 5px 5px 5px;
+}
+div h1 .patrullas img{
+    padding: 5px 5px 5px 5px;
+    width: 1820px;
+    height: 550px;
+    margin: 10px 30px;
+    }
+
+.Bloque1 {
+
+
+    background-color: rgb(210, 213, 250);
+    margin: 5px 5px;
+    padding: 1%;
+
+}
+.Subtitulo{
+    background-color: rgb(210, 213, 250);
+    margin: 5px 5px;
+    padding: 1%;
+}
+
+.Bloque2 {
+
+
+
+    background-color: rgb(210, 213, 250);
+    margin: 5px 5px;
+    padding: 1%;
+
+    
+}
+.Bloque3 {
+
+    background-color: rgb(210, 213, 250);
+    margin: 5px 5px;
+    padding: 1%;
+
+    
+}
+.Bloque4 {
+    background-color: rgb(252, 252, 255);
+    margin: 5px 5px;
+    padding: 1%;
+    
+}
+section div img{
+    padding: 5px 5px 5px 5px;
+    width: 600px;
+    height: 550px;
+    margin: 10px 30px;
+}
+
+
+.contenido-Bloque4{
+    background-color: rgb(255, 255, 255);
+    margin: 5px 5px;
+    padding: 1%;
+}
+.lista-Dispositivos{
+    background-color: rgb(255, 255, 255);
+    margin: 5px 5px;
+    padding: 1%;
+}
+.items{
+    background-color: rgb(210, 213, 250);
+}
+.imagen-Bloque4{
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin:0 auto;
+}
+.video{
+    margin: 5px 28%;
+    padding: 10px 10px;
+        background-color: rgb(255, 255, 255);
+}
+
+.copyright{
+    text-align: center;
+    
+    }
+footer div img{
+    margin: 5px 46%;
+    }
+/*estos son loc olores de los link en es orden siempre  */
+a:link {
+	color:blueviolet;
+}
+a:visited{
+	color: gray;
+}
+a:hover{
+	color:yellow;
+}
+a:active{
+	color:red;
+}
