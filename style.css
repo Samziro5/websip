@@ -33,7 +33,7 @@ nav {
     padding: 30px 50px 10px 20px;
 }
 nav li{
-    display: inline;
+    display: inline-flex;
     margin: 0 0 0 15px;
 
 }
@@ -41,7 +41,7 @@ nav a{
     text-transform: uppercase;
     color: #000000;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 17 px;
     text-decoration: none;
 }
 h1 {
@@ -100,6 +100,7 @@ section div img{
 }
 
 
+
 .contenido-Bloque4{
     background-color: rgb(255, 255, 255);
     margin: 5px 5px;
@@ -123,14 +124,50 @@ section div img{
     padding: 10px 10px;
         background-color: rgb(255, 255, 255);
 }
+footer div img{
+    margin: 5px 46%;
+    width: 150px;
+    height: 187px;
+}
 
 .copyright{
     text-align: center;
     
     }
-footer div img{
-    margin: 5px 46%;
-    }
+.sct{
+    text-align: center;
+   
+}
+.dgot{
+    text-align: center;
+
+}
+.zv1{
+    text-align: center;
+}
+.zv1{
+    text-align: center;
+}
+.zv2{
+    text-align: center;
+}
+.zv3{
+    text-align: center;
+}
+.zv4{
+text-align: center;
+}
+.zv5{
+    text-align: center;
+}
+.zv6{
+    text-align: center;
+}
+.zv7{
+    text-align: center;
+}
+
+
 /*estos son loc olores de los link en es orden siempre  */
 a:link {
 	color:blueviolet;
