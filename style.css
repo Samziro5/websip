@@ -1,7 +1,11 @@
-
+.fondocolor{
+    background-color: aqua;
+}
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: aqua;
 }
+
 
 header {
     height: 200px;
