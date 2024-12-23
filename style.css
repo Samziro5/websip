@@ -1,36 +1,27 @@
-.fondocolor{
-    background-color: aqua;
-}
+/* etiqueta body */
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: aqua;
 }
-
-
 header {
-    display: flex;
     height: 200px;
     margin: 10px 10px 10px 10px;
-    flex-direction:wrap;
+        background-color: aqua;
+
+}
+header {
+    display: flex;
     flex-wrap: wrap;
-    background-color: aqua;
-    
 }
-div .caja {
-    height: 30px;
-    padding: 10px 10px 10px 10px;
-  border: 3px solid green;
-  
-        background-color: rgb(255, 115, 0);
-        /*background-image: url(/Imagenes/ANUBISv3.png);*/
-       
-}
-img{
+
+/* logo anubis sm */
+
+.logoAnubis{
  width: 150px;
+ height: 150px;
  margin: 0px 10px 25px 40px;
-
 }
-
+/* Boton de Navegacion */
 nav {
     margin: rigth 20px;
     position:absolute;
@@ -50,10 +41,11 @@ nav a{
     font-size: 17 px;
     text-decoration: none;
 }
-
+/* etiqeta de subtitulo imagen  */
 h1 {
     padding: 5px 5px 5px 5px;
 }
+/* imagen principal */
 div h1 .patrullas img{
     padding: 5px 5px 5px 5px;
     width: 1820px;
@@ -63,90 +55,118 @@ div h1 .patrullas img{
 
 .Bloque1 {
 
-
     background-color: rgb(210, 213, 250);
     margin: 5px 5px;
     padding: 1%;
 
 }
+/* Subtitulo Bloque 1 */
 .Subtitulo{
     background-color: rgb(210, 213, 250);
     margin: 5px 5px;
     padding: 1%;
 }
-
+/* Bloque 2 */
 .Bloque2 {
-
-
-
     background-color: rgb(210, 213, 250);
     margin: 5px 5px;
     padding: 1%;
-
-    
 }
+/* Bloque 3 */
 .Bloque3 {
-
     background-color: rgb(210, 213, 250);
     margin: 5px 5px;
     padding: 1%;
-
-    
 }
+/* Bloque 4 */
 .Bloque4 {
     background-color: rgb(252, 252, 255);
     margin: 5px 5px;
     padding: 1%;
-    
+
 }
-section div img{
+/* Bloque div de foto */
+section div .foto-anubis-final{
     padding: 5px 5px 5px 5px;
-    width: 600px;
-    height: 550px;
-    margin: 10px 30px;
+    width: 1080px;
+    height: 400px;
+    margin:auto;
 }
 
-
-
+/* contenedro bloque 4 */
 .contenido-Bloque4{
     background-color: rgb(255, 255, 255);
     margin: 5px 5px;
     padding: 1%;
 }
+/* lu-li lista  */
 .lista-Dispositivos{
     background-color: rgb(255, 255, 255);
     margin: 5px 5px;
     padding: 1%;
 }
+/* elementos del listado */
 .items{
     background-color: rgb(210, 213, 250);
 }
+/* } foto de anubis al final */
+.imagen-Bloque4{
+    width: 400px;
+    height: 400px;
+
+}
+/* } foto de anubis al final */
 .imagen-Bloque4{
     background-color: rgb(255, 255, 255);
     display: block;
     margin:0 auto;
 }
+/* video */
 .video{
     margin: 5px 28%;
     padding: 10px 10px;
         background-color: rgb(255, 255, 255);
 }
+/* imagen pie de pagina */
 footer div img{
     margin: 5px 46%;
     width: 150px;
     height: 187px;
 }
-
+/* texto copiright */
 .copyright{
     text-align: center;
-    
     }
+/* HOJA DIRECCIONES */
+
+/* contenedor Navegación Direcciones  */
+.container-nav{
+    display: flex;
+   flex-wrap: wrap;
+}
+.container-nav{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .row-nav{
+    margin-right: auto;
+   }
+   .column-nav{
+    display:inline-flex;
+    justify-content: flex-start;
+    
+   }
+
+div .container-sct{
+    display: flex;
+    flex-wrap:wrap ;
+}
 .sct{
     text-align: center;
-   
+
 }
 .dgot{
-    text-align: center;
+    text-align: left;
 
 }
 .zv1{
@@ -185,7 +205,7 @@ ul .menu{
     height: 80px;
     background-color: blue;
     margin:auto;
-   
+
 }
 .col-1{
     display: flex;
@@ -218,29 +238,40 @@ li:nth-child(1){
     flex-direction:column;
     flex-wrap: wrap;
     background-color: aqua;
-    
-   
+
+
+}
+.column-sct{
+    display: flex;
+    justify-content: center;
+
+}
+.column-sct img{
+
+    width: 30px;
+    height: 70px;
+
 }
 .dgot-dgit-dgant{
     display: flex;
     flex-direction:wrap;
     flex-wrap: wrap;
     background-color: aqua;
-    
-   
+
+
 }
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    
+
 }
 .row {
     display: flex;
     margin: 10px 0;
     border: 2px;
-   
+
 }
 div.column {
     flex: 1; /* Cada columna tomará el mismo espacio */
@@ -250,52 +281,75 @@ div.column {
     background-color: #f4f4f4; /* Color de fondo */
     flex-flow:column wrap;
     align-items: center;
-    
-    
+
+
 }
 .column div img{
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     padding: 5px 10px;
     align-items: center;
     border: 2px;
-     
-    
+
+
 }
 .container-sct {
     background-color: rgb(54, 17, 156);
-  
-}   
+
+}
+
 .row-sct{
     background-color: #c0c0c0;
     text-align: center;
 
 }
-.row-sct div img{
-    width: 150px;
-    height: 150px;
+.row-sct{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column-sct div img{
+    width: 160px;
+    height: 160px;
+
+}
+.column-sct{
+display: flex;
+flex-direction:column;
+justify-content: center;
+}
+
+.row-dgot-dgit-dgant{
+    background-color: #c0c0c0;
+
+
 
 }
 .row-dgot-dgit-dgant{
-    background-color: #c0c0c0;
-    text-align: center;
-
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
 .column-dgot-dgit-dgant div img{
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 
 }
 .row-zonas{
+    display: flex;
+    flex-wrap: wrap;
     background-color: #c0c0c0;
+    justify-content:space-around;
+
+}
+.row-zonas{
     text-align: center;
 }
 .column-zonas div img{
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 
 }
 .row-dgit{
@@ -305,9 +359,9 @@ div.column {
 }
 .row-dgit div img{
     background-color: #c0c0c0;
-    width: 150px;
-    height: 150px;
-   
+    width: 160px;
+    height: 160px;
+
 }
 .column-dgit{
         flex: 1; /* Cada columna tomará el mismo espacio */
@@ -323,13 +377,13 @@ div.column {
     text-align: center;
     display: flex;
     flex-direction: column;
-       
+
 }
 .row-dgant div img{
 
     background-color: #c0c0c0;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 }
 .column-dgant{
 
