@@ -140,31 +140,96 @@ footer div img{
 /* HOJA DIRECCIONES */
 
 /* contenedor Navegación Direcciones  */
-.container-nav{
+header {
     display: flex;
-   flex-wrap: wrap;
+    flex-flow: row wrap;
+  
+   
+    
 }
-.container-nav{
+.container-header-1{
+    
+    background-color: #0c9bc7;
+   width: 50%;
+   display: flex;
+   flex-wrap: wrap;
+   
+
+   /* Flex box de Header Direcciones */
+}
+.row-header-1{
+    display: flex;
+    flex-direction: wrap;
+    
+}
+.column-header-1{
     display: flex;
     flex-wrap: wrap;
-   }
-   .row-nav{
-    margin-right: auto;
-   }
-   .column-nav{
-    display:inline-flex;
-    justify-content: flex-start;
     
-   }
-
-div .container-sct{
+}
+.container-header-2{
+    
+    background-color: #abc70c;
+   width: 50%;
+   display: flex;
+   flex-direction: wrap;
+   /* Flex box de Header Direcciones */
+}
+.row-header-2{
+    padding: 80px;
+    margin: auto;
+    padding: auto;
     display: flex;
-    flex-wrap:wrap ;
+   flex-wrap:wrap;
+    align-content: center;
+    
 }
-.sct{
-    text-align: center;
+.column-header-2{
+    display: inline;
+    padding: 15px;
+    display: flex;
+    flex-wrap:wrap;
+     align-content: center;
+    }
+/* Flexbox del Header */
+
+/* Contenedor Subsecretaria  */
+
+.container-sct{
+    background-color: #630cc7;
+display: flex;
+flex-wrap: wrap;
+
 
 }
+.row-sct{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.column-sct{
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto ;
+    padding:5px 450px;
+    
+   
+}
+.column-sct img{
+    height: 150px;
+    width: 150px;
+    
+}
+/* dgot-dgit-dgant */
+.container-dgot-dgit-dgant{
+    display: flex;
+    flex-direction:wrap;
+   
+    background-color: aqua;
+
+
+}
+/* zonas viales  */
 .dgot{
     text-align: left;
 
@@ -232,35 +297,6 @@ li:nth-child(1){
     flex-grow: 2;
 }
 
-
-.subsecretaria{
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    background-color: aqua;
-
-
-}
-.column-sct{
-    display: flex;
-    justify-content: center;
-
-}
-.column-sct img{
-
-    width: 30px;
-    height: 70px;
-
-}
-.dgot-dgit-dgant{
-    display: flex;
-    flex-direction:wrap;
-    flex-wrap: wrap;
-    background-color: aqua;
-
-
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -296,30 +332,7 @@ div.column {
 
 
 }
-.container-sct {
-    background-color: rgb(54, 17, 156);
 
-}
-
-.row-sct{
-    background-color: #c0c0c0;
-    text-align: center;
-
-}
-.row-sct{
-    display: flex;
-    flex-wrap: wrap;
-}
-.column-sct div img{
-    width: 160px;
-    height: 160px;
-
-}
-.column-sct{
-display: flex;
-flex-direction:column;
-justify-content: center;
-}
 
 .row-dgot-dgit-dgant{
     background-color: #c0c0c0;
@@ -396,7 +409,64 @@ justify-content: center;
     align-items: center;
 }
 
+/* prueba  */
+.container-prueba1{
+display:flex;
+flex-wrap: wrap;
+}
+.container-prueb1{
+    margin: auto;
+    
+    border-color: #0c9bc7;
+    background-color: #4929fa;
+    padding: 2px;
 
+
+}
+.container-prueb2 .anubiscont{
+    margin: auto;    
+    border-color: #46b612;
+    background-color: #044b10;
+    padding: 2px;
+    height: 150px;
+    width: 150px;
+
+    
+
+
+}
+.column-prueb2{
+    margin: auto;
+    padding: 2px;
+    background-color: #d5d81a;
+    border:#000000;
+    display: inline;
+
+}
+.row-prueb{
+    margin: auto;
+    padding: 2px;
+    background-color: #0c9bc7;
+    border:#000000
+    
+
+    
+
+}
+.column-prueb{
+    margin: auto;
+    padding: 2px;
+    background-color: #45dd09;
+    border:#4929fa 30px;
+    
+
+}
+
+
+/*  */
+
+
+/* fuin prueba  */
 /*estos son loc olores de los link en es orden siempre  */
 a:link {
 	color:blueviolet;
