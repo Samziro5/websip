@@ -2,22 +2,18 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: #4929fa;
-    display: flex;
-    flex-wrap: wrap;
+   
     
 }
+ 
+
 header {
+    display: flex;
+    flex-wrap: wrap;
     height: 200px;
-    margin: 10px 10px 10px 10px;
-        background-color: rgb(255, 255, 255);
-
+        
 }
-header {
-    display: flex;
-    flex-wrap: wrap;
 
-    
-}
 
 /* logo anubis sm */
 
@@ -25,6 +21,11 @@ header {
  width: 150px;
  height: 150px;
  margin: 0px 10px 25px 40px;
+}
+.logoAnubis-header{
+  
+    width: 150px;
+    height: 150px;
 }
 /* Boton de Navegacion */
 nav {
@@ -169,8 +170,30 @@ footer div img{
 .container-header {
     display: flex;
     flex-wrap: wrap;
-   
+    width: 100%;
+    height:200px;
+  
+    
 }
+.img-header{
+    width: 100%;
+    height: 195px;
+    position:absolute;
+    
+   }
+   .row-header{
+    display: flex;
+    flex-direction: row;
+   
+    width: 100%;
+   }
+   .column-header1{
+    width: 50%;
+    height: 200px;
+  
+    position: relative;
+
+   }
 .container-header-1{
     
 background-color: #ffffff;
@@ -178,7 +201,7 @@ background-color: #ffffff;
    display: flex;
    flex-wrap: wrap;
    width: 500px;
-  
+
 
    /* Flex box de Header Direcciones */
 }
@@ -198,21 +221,23 @@ background-color: #ffffff;
  
    /* Flex box de Header Direcciones */
 }
-.row-header-2{
+
+.row-header2{
     padding: 80px;
     margin: auto;
     padding: auto;
-    
+    text-decoration: none;
   
 }
-.column-header-2{
+.column-header2{
     display: inline;
     padding: 15px;
+  
        
    
     }
-    .column-header-2 a{
-        text-decoration: none;
+.column-header2 a{
+        
 
     }
 /* Flexbox del Header */
@@ -661,6 +686,88 @@ text-align: center;
     display: flex;
     flex-direction: row;
 }
+/* Contenedor Formulario */
+.form-inf{
+    width:90%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 5%;
+    padding:10px 50px 50px 10px;
+    border: 2px solid #ffffff;
+
+   
+ 
+}
+.container-infr{
+    border: 4px solid #131212;
+    width: 30%;
+    margin:0%;
+    border-radius: 10px;
+   
+}
+.row-inf{
+    justify-content: center;
+
+}
+.column-inf1{
+    margin: 0%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    gap:20px
+    
+}
+#enviar{
+    margin: 0%;
+    width:80px;
+    padding: 5px 10px 5px 10px;
+}
+.column-inf2{
+    margin: 5px;
+    padding: 10px 10px;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+/* Login */
+.container-login{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 945px;
+    display: flex;
+    justify-content: center;
+    border:4px solid #000000;
+    background: ;
+  
+}
+.img-login{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 935px;
+    position: absolute;
+    z-index: 2;
+   
+}
+.row-login{
+    margin: 0%;
+    padding: 0%;
+    border:4px solid #b12f2f;
+    width: 90%;
+    height: 800px;
+
+}
+
+
+
+
+
 @media(max-width: 600px){
    
 }
