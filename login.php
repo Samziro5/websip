@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +9,7 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        
 
         <!--     Bootstrap     -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -16,9 +19,10 @@
         <section>
             <div class="container-login">
                 <div class="row-login">
-                    <form action="#" method="post" class="form-login">
+                    <form action="validar.php" method="post" class="form-login">
 
                     <div class=column-login-img><img src="Imagenes/anubis.png" class="img-login"></div>
+                    
                     
                     
                     <div class=column-login>
@@ -27,21 +31,15 @@
                     </div>
                     <div class=column-login>
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" id="contraseña" name="contraseña" required>
+                        <input type="password" id="password" name="password" required>
                     </div>
                     <div class=column-login-acceder>
-                       <button type="submit">Acceder </button>
+                       <button type="submit" id=acceder  name="acceder">Acceder </button> 
                     </div>
 
-
-                    
-                    
-
-                
-             
-
-
+                 
                 </form>
+             
             </div>
            
         </section>
