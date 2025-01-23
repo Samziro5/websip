@@ -1,5 +1,6 @@
 
-
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,42 +19,32 @@
     <body>
         <section>
             <div class="container-login">
-                <div class="row-login">
-                    <form action="validar.php" method="post" class="form-login">
+                    <div class="row-login">
+                        <form action="validar.php" method="post" class="form-login">
 
-                    <div class=column-login-img><img src="Imagenes/anubis.png" class="img-login"></div>
-                    
-                    
-                    
-                    <div class=column-login>
-                        <label for="usuario">Usuario</label>
-                        <input type="txt" id="usuario" name="usuario" required>
-                    </div>
-                    <div class=column-login>
-                        <label for="contraseña">Contraseña</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class=column-login-acceder>
-                       <button type="submit" id=acceder  name="acceder">Acceder </button> 
-                    </div>
+                        <div class=column-login-img><img src="Imagenes/anubis.png" class="img-login"></div>
+                        
+                        
+                        
+                        <div class=column-login>
+                            <label for="usuario">Usuario</label>
+                            <input type="txt" id="usuario" name="usuario" required>
+                        </div>
+                        <div class=column-login>
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class=column-login-acceder>
+                        <button type="submit" id=acceder  name="acceder">Acceder </button> 
+                        </div>
 
                  
-                </form>
+                        </form>
              
+                    </div>
             </div>
-           
         </section>
         
-            
-                
-
-            </div>
-        </div> 
-
-        
     </body>
-    <footer>
-    
-        
-    </footer>
+  
 </html>

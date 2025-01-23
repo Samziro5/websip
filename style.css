@@ -740,10 +740,10 @@ text-align: center;
     margin: 0%;
     padding: 0%;
     width: 100%;
-    height: 730px;
+    height: 911px;
     display: flex;
     flex-wrap: wrap;
-    border:4px solid #000000;
+    border:4px solid #ff0000;
     background-image:url(Imagenes/fondo-login.png);
     background-size: 100% 945px;
     justify-content: center;
@@ -798,7 +798,99 @@ text-align: center;
 }
 
 
+/* Prueba Bustrap */
+.container-let{
+    width:50%;
+    height:250px;
+    border: solid black 2px;
+    
+}
+.row-let{
+    width:50%;
+    height:250px;
+    border: solid rgb(214, 7, 7) 2px;
+    display:flex;
+    flex-direction: row;
+}
+.column-let{
+    width:70%;
+    height:50%;
+    border: solid rgb(74, 14, 214) 2px;
+}
+.column-let-2{
+    width:100%;
+    height:50%;
+    border: solid rgb(92, 155, 11) 2px;
+}
 
+/* modal */
+/* Boton modal  */
+.boton-modal{
+    padding: 40px;
+    background-color: #0c9bc7;
+    
+
+}
+.boton-modal label{
+    padding: 10px 15px;
+    background-color: #09f;
+    color: #ffffff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all  300ms ease;
+
+}
+.boton-modal label:hover{
+    background-color: rgb(3, 67, 109);
+}
+
+
+/* Fin de Boton Modal */
+/* Ventana Modal  */
+#btn-modal{
+    display: none;
+}
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;left: 0;
+    background-color: rgba(144,148,150,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+}
+#btn-modal:checked ~ .container-modal{
+    display:flex;
+
+}
+.content-modal{
+    width: 100px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.content-modal h2{
+    margin-bottom: 15px;
+}
+.content-modal p{
+   padding: 15px 0px;
+   border-top: 1px solid #dbdbdb;
+   border-bottom: 1px solid #dbdbdb;
+}
+.content-modal .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display:flex;
+    justify-content:flex-end;
+}
+.content-modal .btn-cerrar lable:hover{
+    background-color: #185e83;
+
+}
+/* Fin de Ventana Modal  */
 
 
 

@@ -1,4 +1,6 @@
+
 <?php
+
 
 include('db.php');
 
@@ -21,13 +23,15 @@ if ($filas){
     
 }else{
     
-    include("login.php");
+    include("modal.php");
     ?>
-    <h1 class="bad">ERROR EN LA AUTENTIFICACIÓN,<br><span> INTENTA NUEVAMENTE</span></h1>
-    <?php
+<?php
+   
 
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
 
+
 ?>
+    
