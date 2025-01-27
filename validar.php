@@ -18,12 +18,12 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
 if ($filas){
-    header("location:infracciones.html");
+    include("tablero.php");
     
     
 }else{
     
-    include("modal.php");
+  include ("validar.php");
     ?>
 <?php
    

@@ -8,6 +8,8 @@
       </style>
     <link rel="stylesheet" href="rest.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="virtual-select.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
     <!--     Bootstrap     -->
@@ -215,6 +217,35 @@
         </div>
     </div>
 </section>
+    <section class="botoncito">
+            <div class="div-label">
+                <label class="label-botoncito">ZONAS VIALES </label>
+                <select id="multipleSelect" multiple name="native-select" placeholder="Sleccione Zonas Viales" data-search="true" data-silent-initial-value-set="true">
+                    <option value="1">Zona 1 Norte</option>
+                    <option value="2">Zona 2 Centro</option>
+                    <option value="3">Zona 3 Oriente</option>
+                    <option value="3">Zona 4 Sur</option>
+                    <option value="3">Zona 5 Poniente</option>
+                    <option value="3">Zona 6 Infracciones</option>
+                    <option value="3">Zona 7 Grúas</option>
+                    <option value="3">Zona 8 Parquímetros</option>
+
+                </select>
+
+            </div>
+            <script type="text/javascript" src="js/virtual-select.min.js"></script>
+            <script type="text/javascript">
+                VirtualSelect.init({
+                    ele: '#multipleSelect'
+
+                });
+            </script>
+    
+
+
+
+
+    </section>
 </html>
 
 

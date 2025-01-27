@@ -892,8 +892,113 @@ text-align: center;
 }
 /* Fin de Ventana Modal  */
 
+/* tabla dashboard */
+.container-tablero{
+    margin: 0%;
+    width: 100%;
+    height: 720px;
+    border: 2px solid rgb(255, 94, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-tablero{
+    margin: 0%;
+    width: 98%;
+    height: 685px;
+    border: 2px solid rgb(6, 2, 245);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+}
+.form-tablero{
+    width: 1855px;
+    height: 685px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;   
+    justify-items: space-around;
+    border: 2px solid rgb(94, 0, 20);
 
 
+
+}
+.column-tabla-1{
+    width: 100%;
+    border: 3px solid rgb(10, 230, 58);
+    
+}
+.column-tabla-2{
+
+    border: 3px solid rgb(10, 230, 58);
+    width: 100%;
+}
+.column-tabla-3{
+
+    border: 3px solid rgb(10, 230, 58);
+   
+}
+.row-column-tabla-3{
+    margin: 0%;
+    
+    width: 98%;
+    height: 480px;
+    border: 3px solid rgb(197, 255, 60);
+    
+    
+
+}
+.column-tabla-4{
+
+    border: 3px solid rgb(10, 230, 58);
+}
+.row-column-tabla-1{
+
+    width: 400px;
+    border: 1px solid rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+   
+}
+#vehiculos{
+    width: 200px;
+    justify-items:end;
+}
+
+label{
+    width: 60px;
+}
+
+/* boostrap */
+.botoncito{
+width: 100%;
+height: 500px;
+border: 2px solid rgb(19, 19, 19);
+
+}
+/* .div-label{ 
+    width: 800px;
+height: 200px;
+border: 1px solid rgb(255, 0, 0);
+
+}*/
+label.label-botoncito{
+    width: 100%;
+}
+.label-botoncito{
+   font-size:25px;
+   font-weight:bold;
+border: 2px solid rgb(197, 183, 183);
+
+}
+#multipleSelect{
+    width: 800px;
+    height: 30px;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: #09f;
+}
 
 @media(max-width: 600px){
    
