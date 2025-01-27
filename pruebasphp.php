@@ -12,9 +12,9 @@ $sql = "SELECT * FROM `sabana_prueba`WHERE ARTICULO";
     <title>Document</title>
 </head>
 <body>
-    <form action="#" method="get" class="form-tablero">
-        <label for ="vehiculos">Vehículos</label>
-        <input type="text" id=vehiculos name="vehiculos">  
+    <form action="#" method="post" class="form-tablero">
+        <label for ="ARTICULO">articulo</label>
+        <input type="text" id=ARTICULO name="ARTICULO" getElement>  
    
     
 </body>
