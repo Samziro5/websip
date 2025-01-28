@@ -1,5 +1,32 @@
+
 <?php
+// Conexión a la base de datos
+$conexion= new mysqli("localhost","root","","bd_websip");
+// Verificar la conexión
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
+}
+
+// Consulta para contar el número de artículos
+$sql = "SELECT COUNT(*) as total FROM sabana_prueba"; // Cambia según tus necesidades
+$result = $conexion->query($sql);
+
+// Inicializar la variable para el valor del input
+$valor = 0; // Valor por defecto
+
+// Verificar si la consulta fue exitosa
+if ($result) {
+    $row = $result->fetch_assoc(); // Obtener el resultado
+    $valor = $row['total']; // Asignar el total a la variable
+} else {
+    echo "Error en la consulta: " . $conexion->error;
+}
+
+// Cerrar la conexión
+$conexion->close();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +81,7 @@
                     <div class="column-tabla-1"><h5> INFRACCIONES GENERALES</h5>
                         <div class="row-column-tabla-1">
                             <label for ="vehiculos">Vehículos</label>
-                            <input type="text" id=vehiculos name="vehiculos">  
+                            <input type="text" value="<?php echo htmlspecialchars($valor);?>" id="ARTICULO" name="ARTICULO"/>  
                          
                             
                         </div>
