@@ -1,32 +1,94 @@
 
 <?php
-// Conexión a la base de datos
-$conexion= new mysqli("localhost","root","","bd_websip");
-// Verificar la conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
-}
+    // Conexión a la base de datos
+    $conexion= new mysqli("localhost","root","","bd_websip");
+    // Verificar la conexión
+    if ($conexion->connect_error) {
+        die("Conexión fallida: " . $conexion->connect_error);
+    }
 
-// Consulta para contar el número de artículos
-$sql = "SELECT COUNT(*) as total FROM sabana_prueba"; // Cambia según tus necesidades
+    // Consulta Total de Vehiculos
+    
+    $sql = "SELECT 
+    ZONAVIAL,
+    Infracciones_Vehiculos
+    FROM (
+        SELECT 
+            ZONAVIAL,
+            COUNT(*) AS Infracciones_Vehiculos
+        FROM 
+            sabana09 
+        WHERE 
+            TIPODEVEHICULO != 'MOTOCICLETA'  -- Excluir motocicletas
+        GROUP BY 
+            ZONAVIAL
+        WITH ROLLUP
+        ) AS totalvehiculos";
+
 $result = $conexion->query($sql);
 
-// Inicializar la variable para el valor del input
-$valor = 0; // Valor por defecto
+// Inicializar la variable para el valor del total general
+$valorvehiculos = 0; // Valor por defecto
+$valormotos=0;
 
 // Verificar si la consulta fue exitosa
 if ($result) {
-    $row = $result->fetch_assoc(); // Obtener el resultado
-    $valor = $row['total']; // Asignar el total a la variable
+    // Recorrer todos los resultados
+    while ($row = $result->fetch_assoc()) {
+        // Verificar si ZONAVIAL es NULL (esto indica un total general)
+        if (is_null($row['ZONAVIAL'])) {
+            $valorvehiculos = $row['Infracciones_Vehiculos']; // Asignar el total general a la variable
+        } else {
+            // Aquí puedes manejar los resultados individuales si es necesario
+            // echo "ZONAVIAL: " . $row["ZONAVIAL"] . " - Infracciones: " . $row["Infracciones_Vehiculos"] . "<br>";
+        }
+    }
 } else {
     echo "Error en la consulta: " . $conexion->error;
 }
 
 // Cerrar la conexión
-$conexion->close();
+
+
+// Consulta Total Motos
+$sql = "SELECT 
+    ZONAVIAL,
+    Infracciones_Vehiculos
+    FROM (
+        SELECT 
+            ZONAVIAL,
+            COUNT(*) AS Infracciones_Vehiculos
+        FROM 
+            sabana09 
+        WHERE 
+            TIPODEVEHICULO = 'MOTOCICLETA'  -- Excluir motocicletas
+        GROUP BY 
+            ZONAVIAL
+        WITH ROLLUP
+    ) AS totalmotos";
+
+$result = $conexion->query($sql);
+ // Verificar si la consulta fue exitosa
+if ($result) {
+    // Recorrer todos los resultados
+    while ($row = $result->fetch_assoc()) {
+        // Verificar si ZONAVIAL es NULL (esto indica un total general)
+        if (is_null($row['ZONAVIAL'])) {
+            $valormotos = $row['Infracciones_Vehiculos']; // Asignar el total general a la variable
+        } else {
+            // Aquí puedes manejar los resultados individuales si es necesario
+            // echo "ZONAVIAL: " . $row["ZONAVIAL"] . " - Infracciones: " . $row["Infracciones_Vehiculos"] . "<br>";
+        }
+    }
+} else {
+    echo "Error en la consulta: " . $conexion->error;
+}
+
+// Cerrar la conexión
+$conexion->close();   
+
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,14 +143,12 @@ $conexion->close();
                     <div class="column-tabla-1"><h5> INFRACCIONES GENERALES</h5>
                         <div class="row-column-tabla-1">
                             <label for ="vehiculos">Vehículos</label>
-                            <input type="text" value="<?php echo htmlspecialchars($valor);?>" id="ARTICULO" name="ARTICULO"/>  
-                         
-                            
+                            <input type="text" value="<?php echo htmlspecialchars($valorvehiculos);?>" id="totalvehiculos" name="totalvehiculos"/>  
                         </div>
                         <br><br>
                         <div class="row-column-tabla-1">
                             <label for ="vehiculos">Motos</label>
-                            <input type="text" id=vehiculos name="vehiculos">                  
+                            <input type="text" value="<?php echo htmlspecialchars($valormotos);?>" id="totalmotos" name="totalmotos"/>              
                         </div>
                     </div>    
                         
@@ -105,11 +165,11 @@ $conexion->close();
                             </div>                                
                     </div>
                     
-                
-                    
-
                     <div class="column-tabla-3"><h5>GRÁFICAS</h5>
-                    <div class="row-column-tabla-3"></div>
+                        <div class="row-column-tabla-3">
+                          <img src="Imagenes/graficapbi.png" class="graficaspbi">                                                                            
+                            
+                        </div>
                     
                     </div>
                     <div class="column-tabla-4"><h5>ZONAS VIALES</h5>
