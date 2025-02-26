@@ -1,94 +1,96 @@
+<!--  
+    //<php//
 
-<?php
-    // Conexión a la base de datos
-    $conexion= new mysqli("localhost","root","","bd_websip");
-    // Verificar la conexión
-    if ($conexion->connect_error) {
-        die("Conexión fallida: " . $conexion->connect_error);
+        // Conexión a la base de datos
+        $conexion= new mysqli("db5017197569.hosting-data.io","dbu1936784","Onceenanit0512","dbs13811204");
+        // Verificar la conexión
+        if ($conexion->connect_error) {
+            die("Conexión fallida: " . $conexion->connect_error);
+        }
+
+        // Consulta Total de Vehiculos
+        
+        $sql = "SELECT 
+        ZONAVIAL,
+        Infracciones_Vehiculos
+        FROM (
+            SELECT 
+                ZONAVIAL,
+                COUNT(*) AS Infracciones_Vehiculos
+            FROM 
+                sabana09 
+            WHERE 
+                TIPODEVEHICULO != 'MOTOCICLETA'  -- Excluir motocicletas
+            GROUP BY 
+                ZONAVIAL
+            WITH ROLLUP
+            ) AS totalvehiculos";
+
+    $result = $conexion->query($sql);
+
+    // Inicializar la variable para el valor del total general
+    $valorvehiculos = 0; // Valor por defecto
+    $valormotos=0;
+
+    // Verificar si la consulta fue exitosa
+    if ($result) {
+        // Recorrer todos los resultados
+        while ($row = $result->fetch_assoc()) {
+            // Verificar si ZONAVIAL es NULL (esto indica un total general)
+            if (is_null($row['ZONAVIAL'])) {
+                $valorvehiculos = $row['Infracciones_Vehiculos']; // Asignar el total general a la variable
+            } else {
+                // Aquí puedes manejar los resultados individuales si es necesario
+                // echo "ZONAVIAL: " . $row["ZONAVIAL"] . " - Infracciones: " . $row["Infracciones_Vehiculos"] . "<br>";
+            }
+        }
+    } else {
+        echo "Error en la consulta: " . $conexion->error;
     }
 
-    // Consulta Total de Vehiculos
-    
+    // Cerrar la conexión
+
+
+    // Consulta Total Motos
     $sql = "SELECT 
-    ZONAVIAL,
-    Infracciones_Vehiculos
-    FROM (
-        SELECT 
-            ZONAVIAL,
-            COUNT(*) AS Infracciones_Vehiculos
-        FROM 
-            sabana09 
-        WHERE 
-            TIPODEVEHICULO != 'MOTOCICLETA'  -- Excluir motocicletas
-        GROUP BY 
-            ZONAVIAL
-        WITH ROLLUP
-        ) AS totalvehiculos";
+        ZONAVIAL,
+        Infracciones_Vehiculos
+        FROM (
+            SELECT 
+                ZONAVIAL,
+                COUNT(*) AS Infracciones_Vehiculos
+            FROM 
+                sabana09 
+            WHERE 
+                TIPODEVEHICULO = 'MOTOCICLETA'  -- Excluir motocicletas
+            GROUP BY 
+                ZONAVIAL
+            WITH ROLLUP
+        ) AS totalmotos";
 
-$result = $conexion->query($sql);
-
-// Inicializar la variable para el valor del total general
-$valorvehiculos = 0; // Valor por defecto
-$valormotos=0;
-
-// Verificar si la consulta fue exitosa
-if ($result) {
-    // Recorrer todos los resultados
-    while ($row = $result->fetch_assoc()) {
-        // Verificar si ZONAVIAL es NULL (esto indica un total general)
-        if (is_null($row['ZONAVIAL'])) {
-            $valorvehiculos = $row['Infracciones_Vehiculos']; // Asignar el total general a la variable
-        } else {
-            // Aquí puedes manejar los resultados individuales si es necesario
-            // echo "ZONAVIAL: " . $row["ZONAVIAL"] . " - Infracciones: " . $row["Infracciones_Vehiculos"] . "<br>";
+    $result = $conexion->query($sql);
+    // Verificar si la consulta fue exitosa
+    if ($result) {
+        // Recorrer todos los resultados
+        while ($row = $result->fetch_assoc()) {
+            // Verificar si ZONAVIAL es NULL (esto indica un total general)
+            if (is_null($row['ZONAVIAL'])) {
+                $valormotos = $row['Infracciones_Vehiculos']; // Asignar el total general a la variable
+            } else {
+                // Aquí puedes manejar los resultados individuales si es necesario
+                // echo "ZONAVIAL: " . $row["ZONAVIAL"] . " - Infracciones: " . $row["Infracciones_Vehiculos"] . "<br>";
+            }
         }
+    } else {
+        echo "Error en la consulta: " . $conexion->error;
     }
-} else {
-    echo "Error en la consulta: " . $conexion->error;
-}
 
-// Cerrar la conexión
+    // Cerrar la conexión
+    $conexion->close();    
 
 
-// Consulta Total Motos
-$sql = "SELECT 
-    ZONAVIAL,
-    Infracciones_Vehiculos
-    FROM (
-        SELECT 
-            ZONAVIAL,
-            COUNT(*) AS Infracciones_Vehiculos
-        FROM 
-            sabana09 
-        WHERE 
-            TIPODEVEHICULO = 'MOTOCICLETA'  -- Excluir motocicletas
-        GROUP BY 
-            ZONAVIAL
-        WITH ROLLUP
-    ) AS totalmotos";
+    //?> -->
 
-$result = $conexion->query($sql);
- // Verificar si la consulta fue exitosa
-if ($result) {
-    // Recorrer todos los resultados
-    while ($row = $result->fetch_assoc()) {
-        // Verificar si ZONAVIAL es NULL (esto indica un total general)
-        if (is_null($row['ZONAVIAL'])) {
-            $valormotos = $row['Infracciones_Vehiculos']; // Asignar el total general a la variable
-        } else {
-            // Aquí puedes manejar los resultados individuales si es necesario
-            // echo "ZONAVIAL: " . $row["ZONAVIAL"] . " - Infracciones: " . $row["Infracciones_Vehiculos"] . "<br>";
-        }
-    }
-} else {
-    echo "Error en la consulta: " . $conexion->error;
-}
-
-// Cerrar la conexión
-$conexion->close();   
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,6 +138,7 @@ $conexion->close();
                         
         </div>       
 </header>
+  
     <div class="container-tablero">
     
         <div class="row-tablero">
