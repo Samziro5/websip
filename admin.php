@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 // session_start();
 
 // if (!isset($_SESSION['usuario'])) {
@@ -7,11 +8,21 @@
 // }
 ?>
 
+=======
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+>>>>>>> c4f27fd569678815b95f778241e17a557a48b4a2
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Dashboard</title>     
     
     <link rel="stylesheet" href="reset.css">
@@ -131,4 +142,14 @@
 </footer>
 
 <a href="logout.php">Cerrar sesión</a>
+=======
+    <title>Document</title>
+</head>
+<body>
+    <h1>Admin Conectado </h1>
+    <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']); ?></h1>
+    <p>Has iniciado sesión correctamente.</p>
+    <a href="logout.php">Cerrar sesión</a>
+</body>
+>>>>>>> c4f27fd569678815b95f778241e17a557a48b4a2
 </html>
