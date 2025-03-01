@@ -1,7 +1,7 @@
 /* etiqueta body */
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #4929fa;
+    background-color: #251197;
    
     
 }
@@ -508,7 +508,7 @@ flex-wrap: wrap;
 }
 .container-prueb2 .anubiscont{
     margin: auto;    
-    border-color: #46b612;
+    border-color: #500a3e;
     background-color: #044b10;
     padding: 2px;
     height: 150px;
@@ -539,7 +539,7 @@ flex-wrap: wrap;
 .column-prueb{
     margin: auto;
     padding: 2px;
-    background-color: #45dd09;
+    background-color: #44074d;
     border:#4929fa 30px;
     
 
@@ -736,11 +736,16 @@ text-align: center;
     gap: 15px;
 }
 /* Login */
-.container-login{
+.container-login-section{
+    margin: 0px 0px;
+    padding:0px 0px;
+    /* width:100% */
+}
+ .container-login{
     margin: 0%;
     padding: 0%;
     width: 100%;
-    height: 911px;
+    height: 951px;
     display: flex;
     flex-wrap: wrap;
     border:4px solid #ff0000;
@@ -755,7 +760,7 @@ text-align: center;
 .row-login{
     width: 40%;
     height: 645px;
-   display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -776,6 +781,8 @@ text-align: center;
 .column-login-img{
      width:250px;
     height:250px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .img-login{
     width: 250px;
@@ -904,11 +911,13 @@ text-align: center;
 }
 .row-tablero{
     margin: 0%;
-    width: 98%;
+    width: 99%;
     height: 685px;
-    border: 2px solid rgb(6, 2, 245);
+    border: 6px solid rgb(0, 0, 0);
+    border-radius: 1%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
     
 
 }
@@ -919,44 +928,42 @@ text-align: center;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;   
     justify-items: space-around;
-    border: 2px solid rgb(94, 0, 20);
+    border: 2px solid rgb(255, 255, 255);
 
 
 
 }
 .column-tabla-1{
     width: 100%;
-    border: 3px solid rgb(10, 230, 58);
+    border: 3px solid rgb(255, 255, 255);
     
 }
 .column-tabla-2{
 
-    border: 3px solid rgb(10, 230, 58);
+    border: 3px solid rgb(255, 255, 255);
     width: 100%;
 }
 .column-tabla-3{
 
-    border: 3px solid rgb(10, 230, 58);
-   
+    border: 3px solid rgb(255, 255, 255);      
 }
+
 .row-column-tabla-3{
     margin: 0%;
     
     width: 98%;
     height: 480px;
-    border: 3px solid rgb(197, 255, 60);
-    
-    
-
+    border: 3px solid rgb(255, 255, 255);        
 }
-.column-tabla-4{
-
-    border: 3px solid rgb(10, 230, 58);
+.graficaspbi{
+    width: 99%;
+    height: 470px;
+    border:3px solid rgb(255, 255, 255);  ;
 }
 .row-column-tabla-1{
 
     width: 400px;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -975,7 +982,7 @@ label{
 .botoncito{
 width: 100%;
 height: 500px;
-border: 2px solid rgb(19, 19, 19);
+border: 2px solid rgb(255, 255, 255);
 
 }
 /* .div-label{ 
@@ -990,7 +997,7 @@ label.label-botoncito{
 .label-botoncito{
    font-size:25px;
    font-weight:bold;
-border: 2px solid rgb(197, 183, 183);
+border: 2px solid rgb(255, 255, 255);
 
 }
 #multipleSelect{
@@ -1000,7 +1007,295 @@ border: 2px solid rgb(197, 183, 183);
     background-color: #09f;
 }
 
-@media(max-width: 600px){
+/*  graficos*/
+@media screen and  (max-width: 900px){
+    .container-login{
+        width: 100%;
+        height: 866px;
+      
+      
+       
+    }
+    .row-login{
+        margin-top: 20%;
+        width: 90%;
+        height: 70%;
+
+    }
    
+    
+   
+}
+
+
+/* --------------------------------------------------------chucho CSS ----------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/*--------------------------------------------------- Tipografía y colores base ----------------------- */
+.index ??{
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('../imagenes/fd1.webp'); /* Si deseas agregar una imagen de fondo */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------------------------------------------------- Encabezado ------------------------------------------*/
+header {
+    background-color: rgba(9, 72, 209, 0.925);
+    padding: 10px 0;
+}
+
+header .caja {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoAnubis {
+    max-height: 180px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 28px;
+}
+
+nav ul li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #0124c4;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #500249;    
+}
+
+/*---------------------------------------------------- Secciones principales -------------------- */
+main .Bloque1,
+main .Bloque2,
+main .Bloque3,
+main .Bloque4,
+main .Bloque5 {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo traslúcido */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.Subtitulo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+a {
+    color: #002aff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0021b3cb;
+}
+
+/* -----------------------------------------Imagen principal----------------------------------- */
+.patrullas img {
+    width: 180PX ;
+    height: auto;
+}
+
+/*------------------------------------------ Secciones generales ------------------------------ */
+section??-- 
+    padding: 40px 20px;
+}
+
+.Subtitulo {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #002e5d;
+}
+
+/*--------------------------------------- Bloque1 --------------------------- */
+.Bloque1 {
+    background-color: #fff;
+}
+
+/*-------------------------------------- Bloque2 -----------------------------*/
+.Bloque2 {
+    background-color: #e6e6e6;
+}
+
+.Bloque2 a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #002e5d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Bloque2 a:hover {
+    background-color: #00509e;
+}
+
+.foto-anubis-final {
+    flex: 1 1 300px;
+    padding: 30px;
+}
+
+.imagen-Bloque2 {
+    width: 40%;
+    height: fit-content;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imagen-Bloque2:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------------Estilos para el carrusel---------------------- */
+.BloqueCarrusel {
+    background-color: #f2ee184a;
+    padding: 50px 40px;
+}
+
+.BloqueCarrusel .Subtitulo {
+    margin-bottom: 40px;
+}
+
+.carousel-inner img {
+    max-height: 300px;
+    object-fit: scale-down;
+}
+
+
+
+/* ---------------------------------Bloque3------------------------------------ */
+.Bloque3 {
+    background-color: #fff;
+}
+
+/* ---------------------------------Bloque4------------------------------------ */
+.Bloque4 {
+    background-color: #e6e6e6;
+}
+
+.contenido-Bloque4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-Dispositivos {
+    flex: 1 1 300px;
+    list-style: none;
+    padding: 20px;
+}
+
+.lista-Dispositivos .items {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.foto-anubis-final {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.imagen-Bloque4 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imagen-Bloque4:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------------------------Bloque5------------------------------------------- */
+.Bloque5 {
+    background-color: #fff;
+}
+
+.tiktok-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tiktok-video {
+    flex: 1 1 400px;
+}
+
+/* ----------------------------------Pie de página-------------------------------------- */
+footer {
+    background-color: #002e5d;
+    color: #fff;
+    padding: 24px 0;
+    
+}
+
+.container-footer {
+    position: relative;
+    text-align: center;
+}
+
+.fondofooter {
+    width: 100%;
+    height: auto;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.column-footer1, .column-footer2 {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.img-anubis-footer {
+    width: 100px;
+}
+
+.column-footer2 p {
+    margin-top: 10px;
+    font-size: 0.9em;
 }
 
