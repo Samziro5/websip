@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,7 +23,7 @@
             </h1>
             <nav>
                 <ul>
-                    <li><a href="/login2.php">Iniciar Sesión</a></li>
+                    <li><a href="/login.php">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </div>
