@@ -1,13 +1,7 @@
-<!-- <?php
+<?php
+session_start();
 
-    session_start();
-
-    //if (!isset($_SESSION['usuario'])) {
-     //   header('Location: admin.php');
-    //    exit();
-    //}
-
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">

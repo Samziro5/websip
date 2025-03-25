@@ -1,6 +1,7 @@
 <?php
-// Variables de conexión a la base de datos
 session_start();
+ob_start(); // Inicia el buffer de salida
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Conexión a la base de datos
@@ -28,14 +29,16 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Usuario encontrado
     $usuario = $result->fetch_assoc();  // Obtener los datos del usuario
-    $_SESSION['usuario'] = $usuario;  // Guardar el nombre de usuario en la sesión
+    $_SESSION['usuario'] = $usuario['usuario'];  // Guardar el nombre de usuario en la sesión
     $_SESSION['Nivel'] = $usuario['Nivel'];  // Guardar el nivel del usuario en la sesión
 
     // Redireccionar según el nivel del usuario
     if ($_SESSION['Nivel'] == 1) {
+        echo "Redirigiendo a admin.php...";
         // Redirigir a la página para usuarios regulares
         header('Location: admin.php');
     } elseif ($_SESSION['Nivel'] == 2) {
+        echo "Redirigiendo a joto chucho raiz.php...";
         // Redirigir a la página para administradores
         header('Location: raiz.php');
     } elseif ($_SESSION['Nivel'] == 3) {
@@ -52,7 +55,7 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-}
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

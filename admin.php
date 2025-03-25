@@ -1,13 +1,14 @@
-<!-- <?php
-
+<?php
 session_start();
 
-//if (!isset($_SESSION['usuario'])) {
- //   header('Location: admin.php');
-//    exit();
-//}
+// //Verificar si el usuario está autenticado /*!== true)*/
+if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) { 
+//Redirigir al usuario a la página de inicio de sesión
+header("Location:login.php");
+    exit();
+}
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,18 +102,18 @@ session_start();
         </section>
 
     <script>
-    function showSection(sectionId) {
-    var sections = document.querySelectorAll('.info-section');
-    sections.forEach(function(section) {
-        section.style.display = 'none';
-    });
-    var selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
-}
-</script>
-  
+        function showSection(sectionId) {
+        var sections = document.querySelectorAll('.info-section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        var selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+    
 
     <section class="logout">
         <a href="logout.php">Cerrar sesión</a>    
@@ -130,7 +131,11 @@ session_start();
     </div>
     
 </footer>
-
-
-
 </html>
+<?php
+// logout.php
+session_start();
+session_destroy(); // Destruye la sesión
+header("Location: login.php"); // Redirige a la página de inicio de sesión
+exit();
+?>
