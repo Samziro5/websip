@@ -35,7 +35,8 @@ header("Location:login.php");
 <header class="header-raiz">
     <section class="titulo-conectado">
         <h6>Usuario Conectado &nbsp;  </h6>                    
-        <h6>Bienvenido. &nbsp; <?php echo htmlspecialchars($_SESSION['usuario']); ?></h6><br>
+        <h6>Bienvenido. &nbsp; <?php echo htmlspecialchars($_SESSION['usuario']); ?>&nbsp;</h6>
+        <br>
         <h6>Has iniciado sesión correctamente.</h6>
     </section>
     <section> 
@@ -53,6 +54,9 @@ header("Location:login.php");
                         <nav>
                             <ul>
                                 <li><a href="index.php">Principal</a></li>
+                                <li><a href="logout.php">Cerrar sesión</a></li>
+            
+   
                                 <!-- <li><a href="Infracciones.html">Infracciones/Soporte</a></li> -->
                             </ul>
                         </nav>
@@ -115,9 +119,7 @@ header("Location:login.php");
     </script>
     
 
-    <section class="logout">
-        <a href="logout.php">Cerrar sesión</a>    
-    </section>
+   
     
 </body>
 

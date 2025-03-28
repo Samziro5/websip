@@ -28,7 +28,7 @@ session_start();
     <header class="header-raiz">
         <section class="titulo-conectado">
             <h6>Usuario Conectado &nbsp;  </h6>                    
-            <h6>Bienvenido. &nbsp; <?php echo htmlspecialchars($_SESSION['usuario']); ?></h6><br>
+            <h6>Bienvenido. &nbsp; <?php echo htmlspecialchars($_SESSION['usuario']); ?> &nbsp;</h6><br>
             <h6>Has iniciado sesión correctamente.</h6>
         </section>
         <section> 
