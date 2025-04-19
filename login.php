@@ -38,9 +38,9 @@ if ($result->num_rows > 0) {
         // Redirigir a la página para usuarios regulares
         header('Location: admin.php');
     } elseif ($_SESSION['Nivel'] == 2) {
-        echo "Redirigiendo a joto chucho raiz.php...";
+        echo "Redirigiendo a admin.php...";
         // Redirigir a la página para administradores
-        header('Location: raiz.php');
+        header('Location: admin.php');
     } elseif ($_SESSION['Nivel'] == 3) {
         // Redirigir a la página para administradores
         header('Location: raiz.php');

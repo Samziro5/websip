@@ -1184,9 +1184,6 @@ a:hover {
 }
 
 /*------------------------------------------ Secciones generales ------------------------------ */
-section??-- 
-    padding: 40px 20px;
-}
 
 .Subtitulo {
     font-size: 2em;
@@ -1405,8 +1402,16 @@ border: 3px solid rgb(0, 255, 191);
     justify-content:space-evenly;
     
 }
+.btn-group2 .btn{
+    width: 100px;
+  
+}
+
+
 .btn-check{
     width: 800px;
+    background-color:#0d6efd;
+
 }
 /* Logout Cierre de sesion */
 
@@ -1418,7 +1423,7 @@ border: 3px solid rgb(0, 255, 191);
 /**********Infracciones - admin ************/
 .container-inf{
     width: 100%;
-    height: 1130px;
+    height:765px;
     border: 3px solid rgb(255, 255, 255);
     display: flex;
     flex-wrap:wrap ;
@@ -1426,7 +1431,7 @@ border: 3px solid rgb(0, 255, 191);
 }
 .row-inf{
     width: 100%;
-    height: 1130px;
+    height: 870px;
     display: flex;
     justify-content: space-evenly;
     padding-top: 10px;;
@@ -1435,7 +1440,7 @@ border: 3px solid rgb(0, 255, 191);
 }
 .column-inf{
     width: 100%;
-    height:1130px;
+    height:870px;
     border: 3px solid rgb(255, 255, 255);
     display: inline-block;
     justify-content: space-evenly;
@@ -1448,12 +1453,14 @@ border: 3px solid rgb(0, 255, 191);
 }
 .column-cover {
     position: relative;
-    top:1050px;
+    top:695px;
     bottom: 0; /* Posiciona la cubierta en la parte inferior del contenedor */
     left: 0;
     width: 100%;
-    height: 54px; /* Ajusta esta altura para cubrir la barra inferior */
+    height: 56px; /* Ajusta esta altura para cubrir la barra inferior */
     background-color: #A059CC; /* El color debe coincidir con el fondo de tu página */
     z-index: 10; /* Asegúrate de que esta capa esté por encima del iframe */
     margin:0px;
 }
+/* Botones años-mes-dia */
+

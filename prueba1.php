@@ -3,15 +3,15 @@
     
     <form>
        
-                    <div class="btn-group2" role="group2" aria-label="Basic radio toggle button group2">
+                    <div class="btn-group2" role="group" aria-label="Basic radio toggle button group2">
             
-                    <input type="radio" class="btn-check" name="group2" id="btnradio5" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio5" onclick="showSection2('Anos')">Años</label>
+                    <input type="radio" class="btn-check" name="group" id="btnradio5" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio5" onclick="showSection2('Anos')">Años</label> 
                                 
-                    <input type="radio" class="btn-check" name="group2" id="btnradio6" autocomplete="off">
+                    <input type="radio" class="btn-check" name="group" id="btnradio6" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio6" onclick="showSection2('Meses')">Meses</label>
             
-                    <input type="radio" class="btn-check" name="group2" id="btnradio7" autocomplete="off">
+                    <input type="radio" class="btn-check" name="group" id="btnradio7" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio7" onclick="showSection2('Dias')">Dias</label>
                     </div> 
       
