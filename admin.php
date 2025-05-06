@@ -89,16 +89,16 @@ header("Location:login.php");
         </form>
 </section>
         <section id="infracciones" class="info-section">
-                <?php include 'prueba1.php';?>
+                <?php include 'Infracciones/infracciones.php';?>
         </section>
         <section id="motocicletas" class="info-section"style="display:none;">
-                <?php include 'prueba2.html';?>
+                <?php include 'Inf_motos/inf_motos.php';?>
         </section>
         <section id="depositos" class="info-section" style="display:none;">
-                <?php include 'prueba3.html';?>
+                <?php include 'Inf_depositos/inf_depositos.php';?>
         </section>
         <section id="fotos-civicas" class="info-section" style="display:none;">
-            <?php include 'prueba4.html';?>
+            <?php include 'Inf_civicas/inf_fotoscivicas.php';?>
         </section>
      
     

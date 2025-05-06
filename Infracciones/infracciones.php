@@ -1,6 +1,4 @@
-<h1>infracciones</h1>
 <section class="seccion-btn-group2">
-    
     <form>
        
                     <div class="btn-group2" role="group" aria-label="Basic radio toggle button group2">
