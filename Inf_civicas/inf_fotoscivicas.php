@@ -3,24 +3,24 @@
                      <div class="btn-group2" role="group" aria-label="Basic radio toggle button group3">
             
                     <input type="radio" class="btn-check" name="group" id="btnradio8" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio8" onclick="showSection3('Anos_motos')">Años</label> 
+                    <label class="btn btn-outline-primary" for="btnradio8" onclick="showSection3('Anos_fotoscivicas')">Años</label> 
                                 
                     <input type="radio" class="btn-check" name="group" id="btnradio9" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio9" onclick="showSection3('Meses_motos')">Meses</label>
+                    <label class="btn btn-outline-primary" for="btnradio9" onclick="showSection3('Meses_fotoscivicas')">Meses</label>
             
                     <input type="radio" class="btn-check" name="group" id="btnradio10" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio10" onclick="showSection3('Dias_motos')">Dias</label>
+                    <label class="btn btn-outline-primary" for="btnradio10" onclick="showSection3('Dias_fotoscivicas')">Dias</label>
                     </div> 
     </form>
 </section>
-        <section id="Anos_motos" class="info-section3" >
-                <?php include 'Inf_motos/inf_motos_ano.html';?> 
+        <section id="Anos_fotoscivicas" class="info-section3" >
+                <?php include 'Inf_civicas/fotos_civicas_años.html';?> 
         </section>
-        <section id="Meses_motos" class="info-section3"style="display:none;">
-                <?php include 'Inf_motos/inf_motos_mes.html';?>
+        <section id="Meses_fotoscivicas" class="info-section3"style="display:none;">
+                <?php include 'Inf_civicas/fotos_civicas_meses.html';?>
         </section>
-        <section id="Dias_motos" class="info-section3" style="display:none;">
-                <?php include 'Inf_motos/inf_motos_dias.html';?>
+        <section id="Dias_fotoscivicas" class="info-section3" style="display:none;">
+                <?php include 'Inf_civicas/fotos_civicas_dias.html';?>
         </section>
  <script>
     // Mostrar los botones secundarios (Grupo 3)
