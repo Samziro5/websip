@@ -1,20 +1,20 @@
 <section class="seccion-btn-group2">
     <form>
-                     <div class="btn-group2" role="group" aria-label="Basic radio toggle button group3">
+                     <div class="btn-group2" role="group" aria-label="Basic radio toggle button group2">
             
-                    <input type="radio" class="btn-check" name="group" id="btnradio8" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio8" onclick="showSection3('Anos_fotoscivicas')">Años</label> 
+                    <input type="radio" class="btn-check" name="group" id="btnradio14" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio14" onclick="showSection3('Anos_fotoscivicas')">Años</label> 
                                 
-                    <input type="radio" class="btn-check" name="group" id="btnradio9" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio9" onclick="showSection3('Meses_fotoscivicas')">Meses</label>
+                    <input type="radio" class="btn-check" name="group" id="btnradio15" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio15" onclick="showSection3('Meses_fotoscivicas')">Meses</label>
             
-                    <input type="radio" class="btn-check" name="group" id="btnradio10" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio10" onclick="showSection3('Dias_fotoscivicas')">Dias</label>
+                    <input type="radio" class="btn-check" name="group" id="btnradio16" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio16" onclick="showSection3('Dias_fotoscivicas')">Dias</label>
                     </div> 
     </form>
 </section>
         <section id="Anos_fotoscivicas" class="info-section3" >
-                <?php include 'Inf_civicas/fotos_civicas_años.html';?> 
+                <?php include 'Inf_civicas/fotos_civicas_año.html';?> 
         </section>
         <section id="Meses_fotoscivicas" class="info-section3"style="display:none;">
                 <?php include 'Inf_civicas/fotos_civicas_meses.html';?>

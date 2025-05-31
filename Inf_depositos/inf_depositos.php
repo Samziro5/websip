@@ -1,6 +1,6 @@
-<section class="seccion-btn-group3">
+<section class="seccion-btn-group2">
     <form>
-                     <div class="btn-group3" role="group" aria-label="Basic radio toggle button group3">
+                     <div class="btn-group2" role="group" aria-label="Basic radio toggle button group2">
             
                     <input type="radio" class="btn-check" name="group" id="btnradio11" autocomplete="off" checked>
                     <label class="btn btn-outline-primary" for="btnradio11" onclick="showSection3('Anos_depositos')">Años</label> 
@@ -8,7 +8,7 @@
                     <input type="radio" class="btn-check" name="group" id="btnradio12" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio12" onclick="showSection3('Meses_depositos')">Meses</label>
             
-                    <input type="radio" class="btn-check" name="group" id="btnradio113" autocomplete="off">
+                    <input type="radio" class="btn-check" name="group" id="btnradio13" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio13" onclick="showSection3('Dias_depositos')">Dias</label>
                     </div> 
     </form>
@@ -24,9 +24,9 @@
         </section>
  <script>
     // Mostrar los botones secundarios (Grupo 3)
-    function showGroup3() {
-        var group3 = document.getElementById('group3');
-        group3.style.display = 'block';
+    function showGroup4() {
+        var group4 = document.getElementById('group4');
+        group4.style.display = 'block';
     }
 
     // Mostrar la sección seleccionada
