@@ -34,9 +34,9 @@ if ($result->num_rows > 0) {
 
     // Redireccionar según el nivel del usuario
     if ($_SESSION['Nivel'] == 1) {
-        echo "Redirigiendo a admin.php...";
+        echo "Redirigiendo a Menu.php...";
         // Redirigir a la página para usuarios regulares
-        header('Location: admin.php');
+        header('Location: Menu.php');
     } elseif ($_SESSION['Nivel'] == 2) {
         echo "Redirigiendo a admin.php...";
         // Redirigir a la página para administradores

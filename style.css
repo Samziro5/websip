@@ -237,7 +237,8 @@ background-color: #ffffff;
    
     }
 .column-header2 a{
-        
+    display: inline;
+    padding: 15px;
 
     }
 /* Flexbox del Header */
