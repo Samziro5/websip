@@ -12,7 +12,7 @@ header("Location:login.php");
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,46 +29,43 @@ header("Location:login.php");
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
-</head>
-<body>
+    </head>
+    <body>
  
-<header class="header-raiz">
-    <section class="titulo-conectado">
-        <h6>Usuario Conectado &nbsp;  </h6>                    
-        <h6>Bienvenido. &nbsp; <?php echo htmlspecialchars($_SESSION['usuario']); ?>&nbsp;</h6>
-        <br>
-        <h6>Has iniciado sesión correctamente.</h6>
-    </section>
-    <section> 
-        <div class="container-header"> 
-            <div class="row-header"> <img src="Imagenes/fondofooter.webp" class="img-header">
-                
-                <div class="column-header1"> 
-                    <img src="Imagenes/ANUBISv3.png" class="logoAnubis-header"><!--Logo aNUBIS  -->                       
-                    
+    <header >
+        
+        <section class="seccion-usuario">
+            <div class="container-usuario">
+                <div class="row-usuario">
+                    <div class="column-usuario">
+                        <h6>Usuario Conectado&nbsp;</h6>
+                        <h6>Bienvenido.&nbsp; <?php echo htmlspecialchars($_SESSION['usuario']); ?>&nbsp;</h6>
+                        <h6>Has iniciado sesión correctamente.</h6>
+                    </div>
                 </div>
-            
-            <div class="column-header2">
-                    <div class="caja">
-                      <!-- Botones de Nvegacion -->
+            </div>
+        </section>
+        <section class="nav-section2">
+            <section class="container-header3">
+                <div class="row-header3"> 
+                    <img src="Imagenes/fondofooter.webp" class="img-header">
+                    <div class="column-header3"> 
+                        <img src="Imagenes/ANUBISv3.png" class="logoAnubis-header"><!--Logo aNUBIS  -->                       
+                    </div>
+                    <div class="column-header4">
                         <nav>
                             <ul>
                                 <li><a href="Menu.php">Menu</a></li>
-                                 <li><a href="Infracciones_General.php">Infracciones</a></li>
-                                <li><a href="remisiones.php">Remisiones</a><li>
-                                <li><a href="personal_en_plantilla.php">Personal en plantillas</a><li>
+                                <li><a href="Infracciones_General.php">Infracciones</a></li>
+                                <li><a href="remisiones.php">Remisiones</a></li>
+                                <li><a href="PersonalSCT2.php">Personal en plantillas</a></li>
                                 <li><a href="logout.php">Cerrar sesión</a></li>
-            
-   
-                                <!-- <li><a href="Infracciones.html">Infracciones/Soporte</a></li> -->
                             </ul>
                         </nav>
-                    </div>
-                     
-            </div>
-        </div>       
-    
-    </section>   
+                    </div>    
+                </div>
+            </section>
+        </section>   
     </header>    
     <section class="seccion-btn-group">
         <form>
@@ -129,13 +126,10 @@ header("Location:login.php");
 </body>
 
 <footer>
-    <div class="container-footer"><img src="Imagenes/fondofooter.webp" class="fondofooter">
-            <div class="row-footer">
-                <div class="column-footer1"><img src="Imagenes/ANUBISv2.png" class="img-anubis-footer"></div>    
-                <div class="column-footer2"><p class="copyright-footer">&copy Copyright SIP-SCT- 2024</p></div>
-                
-            </div>
-    </div>
-    
+                <div class="row-footer">
+                    <div class="column-footer0"><img src="Imagenes/fondofooter.webp" class="fondofooter"></div>
+                    <div class="column-footer1"><img src="Imagenes/ANUBISv2.png" class="img-anubis-footer"></div>    
+                    <div class="column-footer2"><p class="copyright-footer">&copy Copyright SIP-SCT- 2024</p></div>
+                </div>
 </footer>
 </html>

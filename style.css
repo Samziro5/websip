@@ -1,4 +1,7 @@
 /* etiqueta body */
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: #251197;
@@ -10,7 +13,8 @@ body{
 header {
     display: flex;
     flex-wrap: wrap;
-    height: 200px;
+    height: 220px;
+    
         
 }
 
@@ -24,8 +28,12 @@ header {
 }
 .logoAnubis-header{
   
-    width: 150px;
-    height: 150px;
+    width: clamp(00px, 200vw, 190px); /* ✅ escala entre 100px y 300px según el viewport */
+   
+    max-width: 100%;     /* ✅ no excede el ancho del contenedor */
+    height: auto;        /* ✅ mantiene proporciones */
+    object-fit: contain; /* ✅ asegura que la imagen se ajuste sin recortarse */
+    padding:0px 0px 0px 30px;
 }
 /* Boton de Navegacion */
 nav {
@@ -33,7 +41,8 @@ nav {
     position:absolute;
     top:70px;
     right: 0;
-    padding: 30px 50px 10px 20px;
+    padding: 0px 50px 0px 20px;
+       position: sticky;
 }
 nav li{
     display: inline-flex;
@@ -154,13 +163,13 @@ section div .foto-anubis-final{
 /* imagen de fondo footer */
 .fondofooter{
     width: 100%;
-    margin: 0%;
-    
-    
+    height: 200px;
+  
+    position: relative;
 }
 /* imagen pie de pagina */
 footer div img{
-    margin: 5px 46%;
+    
     width: 150px;
     height: 187px;
 }
@@ -171,29 +180,32 @@ footer div img{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height:200px;
-  
-    
-}
+    height:190px;
+    border: solid 2px red;
+  }
+  /* ✅ Media query para pantallas pequeñas */
+
 .img-header{
-    width: 99.7%;
-    height: 167px;
-    position:absolute;
+    width: 100%;
+    height: 200px;
+    position:inherit;
     
    }
    .row-header{
     display: flex;
-    flex-direction: row;
-   
-    width: 100%;
+    flex-direction:column;
+     width: 100%;
    }
    .column-header1{
-    width: 50%;
-    height: 200px;
+    width: 100%;
+    height: 170px;
   
     position: relative;
+    display: flex;
+  justify-content: center;
 
    }
+
 .container-header-1{
     
 background-color: #ffffff;
@@ -598,58 +610,48 @@ a:active{
 }
 /* Footer */
 .container-footer{
-    margin: 0%;
+   
    width: 100%;   
    height:200px;
-   
-   display: flex;
-   flex-direction: row;
-   justify-content:center;
-         
-}
-footer{
-    margin: 0%;
-    width: 100%;
-}
-.fondofooter{
-    width: 99.7%;
-    height: 200px;
-  
-    position: relative;
+    border:solid 5px rgb(160, 227, 231);
 }
 .row-footer{
   
-    background-color: transparent;
-    width: 99%;
-    height: 189px;
-    position: absolute ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
     
-      
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  
+  
 }
 .column-footer1{
-    position: absolute;
-    background-color: transparent;
-    position: relative;
- 
-    width: 99%;
-    height: 180px;
-   align-items: center;
+    margin-bottom: 10px;
+    z-index:1;
+
 }
 .column-footer2{
-    position: absolute;
-    background-color: transparent;
-    position: relative;
-    
-    width: 99%;
-    height: 180px;
-    align-items: center;
-   
+    margin-bottom: 20px;   
+    z-index:2;
    
 }
+.column-footer0 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index:0;
+}
+footer{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
   
 .img-anubis-footer{
     
@@ -998,7 +1000,7 @@ text-align: center;
 }
 
 label{
-    width: 60px;
+    width: 75px;
 }
 
 /* boostrap */
@@ -1031,7 +1033,7 @@ border: 2px solid rgb(255, 255, 255);
 }
 
 /*  graficos*/
-@media screen and  (max-width: 900px){
+@media screen and  (max-width: 100%){
     .container-login{
         width: 100%;
         height: 866px;
@@ -1104,7 +1106,7 @@ border: 2px solid rgb(255, 255, 255);
     background-image: url('../imagenes/fd1.webp'); /* Si deseas agregar una imagen de fondo */
     /* background-size: cover;
     background-attachment: fixed;
-} */ */
+} */ 
 
 /* -------------------------------------------------- Encabezado ------------------------------------------
 header {
@@ -1382,9 +1384,10 @@ height: 800px;
 border: 3px solid rgb(0, 255, 191);
 
 }
-.img-constr{
-    width: 100%;
-    height: 800px;
+@media (max-width: 100%) {
+    .header.raiz {
+        
+    }
 }
 /* Botones del Tablero  */
 .seccion-btn-group{
@@ -1398,19 +1401,19 @@ border: 3px solid rgb(0, 255, 191);
 }
 
 .btn-group{
-    width: 700px;
+   width:350px;
     display: flex;
     justify-content:space-evenly;
     
 }
 .btn-group2 .btn{
-    width: 100px;
+    width: 70px;
   
 }
 
 
 .btn-check{
-    width: 800px;
+    width: 200px;
     background-color:#0d6efd;
 
 }
@@ -1463,20 +1466,281 @@ border: 3px solid rgb(0, 255, 191);
     z-index: 10; /* Asegúrate de que esta capa esté por encima del iframe */
     margin:0px;
 }
-/* Seccion - personal  */
-.personalenplantilla{
-    width: 100%;
-    height:870px;
-    border: 3px solid rgb(255, 0, 0);
 
+/*Formulario Personal*/
+.card-custom {
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .formulario-personal {
+            background: linear-gradient(to right, #004aad, #ffde59);
+            display: flex;
+            justify-content: center;
+            
+            height: 720px;
+        }
+
+        .imagen-personal {
+            width: 210px;
+            height: 220px;
+        }
+/* nav-responsibe */
+/* Estilos base */
+section .nav-section{
+    border: solid 5px red;
+    width: 100%;
+    height: 20px;
 
 }
-/*Formulario Personal*/
-.buscador {
+.nav-column {
+    display:flex;
+    flex-wrap: wrap;
+    }
+.nav-column1 {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: right;
+    }
+
+
+
+/* Responsive header */
+@media (max-width: 50%) {
+    .titulo-conectado h6 {
+        font-size: 14px;
+    }
+
+    .nav-column1 ul {
+        flex-direction: column;
+        align-items: center;
+        max-width:40%;
+        padding: 5px;
+        
+    }
+
+    .nav-column1 ul li {
+        margin: 8px 0;
+    }
+
+    .logoAnubis-header {
+        max-width: 120px;
+    }
+}
+
+
+/* .card-custom {
+      width: 100%;
+      max-width: 700px;
+    }
+.label-nombre {
+      
+      width:70px;
+      
+}
+.label-zonavial{
+    width:70px;
+}
+.label-funciones{
+    width:75px;
+}     */
+
+
+/* #placa-re,#nombre,#curp {
+    width: 245px;
+}
+#zona,#grado,#funciones{
+    width: 225px;
+} */
+/* .buscador {
   margin: 20px;
   padding: 10px;
-  border: 1px solid #ccc;
+ 
 }
 .resultado {
   margin-top: 20px;
+}
+.Formulario-personal{
+     border: 8px solid rgb(10, 238, 86);
+    width: 75%;
+    height:870px;
+    display: flex;
+    justify-content: center;
+}
+.Form-Personal-container{
+   border: 6px solid rgb(0, 204, 255);
+    width: 100%;
+    height:870px;
+}
+.Form-Personal-row{
+   border: 8px solid rgb(26, 81, 201);
+    width: 99%;
+    height:870px;
+}
+.Form-Personal-column1{
+   border: 10px solid rgb(255, 153, 0);
+    width: 100%;
+    height:70px;
+}
+.Form-Personal-column2{
+   border: 10px solid rgb(83, 170, 32);
+    width: 100%;
+    height:80px;
+}
+.Form-Personal-column3{
+   border: 10px solid rgb(255, 153, 0);
+    width: 100%;
+    height:270px;
+}
+.Form-Personal-column4{
+   border: 10px solid rgb(255, 153, 0);
+    width: 100%;
+    height:440px;
+}
+section#Personal.info-section-personal{
+     border: 15px solid rgb(161, 25, 143);
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.form-buscar{
+
+    border: 10px solid rgb(208, 255, 0);
+   display: flex;
+    justify-content: center;
+    gap:30px
+}
+label.placa-text{
+    width: 150px;
+    
+    text-decoration: #1100ff;
+}
+input#placa{
+        font-size:medium;
+        width: 250px;
+}
+.boton-buscador{
+    width: 90px;
+    border-radius: 5px;
+}
+.success-message{
+    font-size: 20px;
+}
+.contorno-imagen-personal{
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+height: 250px;
+
+
+}
+div.imagen-resultado{
+    display: flex;
+    justify-content: center;
+    width: auto;
+  height: 250px;
+  object-fit:fill; /* Opcional: controla cómo se ajusta la imagen 
+  border: 3px solid yellow;
+}
+input#nombre{
+    width:240px;
+} */
+ /* Nuevo Contenedor responsive */
+.seccion-usuario {
+  width: 100%;
+  background-color: gray;
+}
+
+.container-usuario {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row-usuario {
+  display: flex;
+  flex-wrap: wrap; /* ✅ Permite que las columnas se acomoden en varias filas */
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 3vw; /* ✅ Texto escalable */
+}
+
+.column-usuario {
+ display:flex;
+ white-space: nowrap; /* ✅ Mantiene el texto en una sola línea */
+  min-width: 150px; /* ✅ Más flexible que 255px */
+  text-align: center;
+   font-size: clamp(12px, 2vw, 24px); /* ✅ Escala entre 12px y 24px según el ancho */
+  margin: 0;
+}
+
+/* ✅ Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .column-usuario h6 {
+    font-size: 2vw; /* Un poco más pequeño en tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .column-usuario h6 {
+    font-size: 1vw; /* Más pequeño en móviles */
+  }
+}
+
+/*Nav- pruebas */
+
+.nav-section2{
+   
+    width: 100%;
+    height: 220px;
+    display:flex;
+    flex-wrap:wrap;
+}
+.container-header3{
+
+ width: 100%;
+ height:200px;
+}
+.row-header3{
+
+ width: 100%;
+ height:200px;
+ display:inline-flex;
+ position:absolute;
+ }
+
+.column-header3{
+
+ width: 100%;
+ height:200px;
+ position: relative;
+}
+.column-header4{
+
+ width: 100%;
+ height:200px;
+ position: relative;
+ font-size: 2vw;
+}
+
+
+.column-menu{
+    width: 100%;
+    height:570px;
+   
+    display: inline-block;
+    justify-content: space-evenly;
+   position:relative;
+         
+}
+.section-menu-cont{
+  
+ width: 100%;
+ 
 }
